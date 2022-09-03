@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+ <div id="app">{{connect}}</div>
+
+<script>
+   // var dom = document.getElementById("app");
+   // dom.innerHTML = "hello world";
+
+   var app = new Vue({
+       el:'#app',
+       data:{
+           connect:"hello world in Vue"
+       }
+   });
+
+</script>
+
+</body>
+</html>
