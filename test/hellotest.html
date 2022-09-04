@@ -12,12 +12,16 @@
    // var dom = document.getElementById("app");
    // dom.innerHTML = "hello world";
 
-   var app = new Vue({
+   let app = new Vue({
        el:'#app',
        data:{
            connect:"hello world in Vue"
        }
    });
+
+   setTimeout(function (){
+       app.$data.connect = 'bye'
+   },2000)
 
 </script>
 

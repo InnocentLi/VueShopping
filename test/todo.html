@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todoList</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="inputValue">
+    <button v-on:click="HandledClickBtn">submit</button>
+    <ul>
+        <li v-for="item in list">{{item}}</li>
+    </ul>
+</div>
+<!--'shopping in YoDoBaShi','reading a book','finding a job','going into a hospital'-->
+<script>
+ let app = new Vue({
+     el:'#app',
+     data:{
+         list:[],
+         inputValue:""
+     },
+     methods:{
+         HandledClickBtn:function (){
+             alert("click")
+         }
+     }
+ })
+
+</script>
+</body>
+</html>
