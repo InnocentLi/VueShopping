@@ -24,7 +24,9 @@
      },
      methods:{
          HandledClickBtn:function (){
-             alert("click")
+             this.list.push(this.inputValue);
+             this.inputValue = "";
+
          }
      }
  })
