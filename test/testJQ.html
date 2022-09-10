@@ -8,8 +8,9 @@
 <body>
 
     <button id="btn">submit</button>
-
-<script src="">
+    <input type="text" id="input">
+    <ul id="list"></ul>
+<script>
     function Page(){
 
     }
@@ -18,14 +19,20 @@
             this.bindEvents();
         },
         bindEvents:function(){
-            let btn = $('btn');
+            let btn = $('#btn');
             btn.on('click',$.proxy(this.handleBtnClick,this))
         },
         handleBtnClick:function(){
             let inputElem = $("#input");
             let inputValue = inputElem.val();
+            let ulElem = $("#list");
+            ulElem.append('<li>'+inputValue+'</li>');
+            inputElem.val('');
         }
     })
+
+    let page = new Page();
+    page.init();
 
 </script>
 
